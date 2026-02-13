@@ -1,8 +1,5 @@
 package com.menak.activity1
-import android.annotation.SuppressLint
-import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -12,16 +9,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Spinner
 import android.widget.Toast
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-
-import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
-
-import androidx.activity.enableEdgeToEdge
-import java.net.URL
 
 
 class LinksActivity : AppCompatActivity() {
@@ -48,19 +39,16 @@ class LinksActivity : AppCompatActivity() {
             val addBtn = findViewById<Button>(R.id.AddLinkBTN) // reuse button
             val listView = findViewById<ListView>(R.id.linksListView)
 
-            //Spinner Creation and Adaption
-            val SpinnerOptions = arrayOf("food", "Cars", "games","books")
+            val SpinnerOptions = arrayOf("C#", "Java", "Kotlin","React")
             val arrayAdp = ArrayAdapter(this@LinksActivity, android.R.layout.simple_spinner_item, SpinnerOptions)
             SpinnerId.adapter = arrayAdp
 
 
-            // List adapter
             adapter = LinkAdapter(linkList)
             listView.adapter = adapter
 
 
 
-            // Add button click
             addBtn.setOnClickListener {
 
                 val title = titleInput.text.toString().trim()

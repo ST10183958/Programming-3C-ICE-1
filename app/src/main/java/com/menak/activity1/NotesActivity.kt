@@ -1,8 +1,6 @@
 package com.menak.activity1
 import android.annotation.SuppressLint
-import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -51,9 +49,9 @@ class NotesActivity : AppCompatActivity() {
                 val text = noteInput.text.toString().trim()
 
                 if (text.isNotEmpty()) {
-                    countryList.add(text)      // Append to list
-                    adapter.notifyDataSetChanged() // Refresh list
-                    noteInput.text.clear()     // Clear input field
+                    countryList.add(text)
+                    adapter.notifyDataSetChanged()
+                    noteInput.text.clear()
                 }
             }
 

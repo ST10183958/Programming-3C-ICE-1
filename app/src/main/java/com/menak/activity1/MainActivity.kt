@@ -1,10 +1,7 @@
 package com.menak.activity1
-import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
